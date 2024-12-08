@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'HealthCare Website',
     description: 'Medimate is an AI-powered health-tech platform offering symptom analysis, mental health chat, community discussions, and medical news.',
-    image: 'src/img/Screenshot 2024-12-08 at 10.14.07 AM.png',
+    image: '/Screenshot 2024-12-08 at 10.14.07 AM.png',
     tags: ['Vue js', 'Node.js', 'TailwindCSS'],
     github: 'https://github.com/safarBots/commmunity_page/tree/main',
     demo: 'https://commmunity-pagebus.onrender.com/',
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Ticket Booking Tourism Website',
     description: 'Safar Bots is a chatbot-based ticket booking platform offering seamless travel experiences with interactive AI assistance.',
-    image: 'src/img/Screenshot 2024-12-08 at 10.26.15 AM.png',
+    image: '/Screenshot 2024-12-08 at 10.26.15 AM.png',
     tags: ['TailwindCSS', 'Razorpay', 'Firebase'],
     github: 'https://github.com/safarBots/Varanasi/tree/main',
     demo: 'https://varanasi-3.onrender.com',
