@@ -1,40 +1,63 @@
-import React, { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import * as THREE from 'three';
-import NET from 'vanta/dist/vanta.net.min';
+import { useFrame, Canvas } from '@react-three/fiber';
+import { Points, PointMaterial } from '@react-three/drei';
 
-function Background() {
-  const vantaRef = useRef(null);
+// Create our own sphere generation function since maath/random is causing issues
+function generateSpherePoints(count: number, radius: number): Float32Array {
+  const positions = new Float32Array(count * 3);
+  
+  for (let i = 0; i < count; i++) {
+    const i3 = i * 3;
+    const u = Math.random();
+    const v = Math.random();
+    const theta = 2 * Math.PI * u;
+    const phi = Math.acos(2 * v - 1);
+    const r = radius * Math.cbrt(Math.random()); // For uniform distribution within sphere
+    
+    positions[i3] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i3 + 2] = r * Math.cos(phi);
+  }
+  
+  return positions;
+}
 
-  useEffect(() => {
-    const vantaEffect = NET({
-      el: vantaRef.current,
-      THREE: THREE,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x3b82f6,
-      backgroundColor: 0x0a192f,
-      points: 15.00,
-      maxDistance: 25.00,
-      spacing: 18.00,
-      showDots: false
-    });
-
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, []);
+function ParticleField() {
+  const ref = useRef<THREE.Points>(null);
+  const sphere = generateSpherePoints(5000, 1.5);
+  
+  useFrame((state) => {
+    if (!ref.current) return;
+    const time = state.clock.getElapsedTime();
+    ref.current.rotation.x = time * 0.1;
+    ref.current.rotation.y = time * 0.15;
+  });
 
   return (
-    <>
-      <div ref={vantaRef} className="fixed inset-0 -z-10" />
-      <div className="fixed inset-0 bg-gradient-to-b from-transparent via-[#0A192F]/50 to-[#0A192F] pointer-events-none" />
-      <div className="fixed inset-0 bg-[#0A192F]/20 backdrop-blur-[1px] pointer-events-none" />
-    </>
+    <group rotation={[0, 0, Math.PI / 4]}>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false}>
+        <PointMaterial
+          transparent
+          color="#3B82F6"
+          size={0.002}
+          sizeAttenuation={true}
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+        />
+      </Points>
+    </group>
+  );
+}
+
+function Background() {
+  return (
+    <div className="fixed inset-0 bg-black">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,rgba(0,0,0,0)_100%)]" />
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <ParticleField />
+      </Canvas>
+    </div>
   );
 }
 
