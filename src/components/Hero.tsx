@@ -50,7 +50,7 @@ function Hero() {
               Hello, I'm
             </span>
             {/* LCP Element - Simplified styling for faster initial render */}
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-poppins font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text transition-all duration-500 hover:from-pink-500 hover:to-yellow-400 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-poppins font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text transition-all duration-500 hover:from-pink-500 hover:to-yellow-400 ">
               Satwick Pandey
             </h1>
             
