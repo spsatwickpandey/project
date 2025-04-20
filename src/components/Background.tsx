@@ -52,12 +52,12 @@ function ParticleField() {
 
 function Background() {
   return (
-    <div className="fixed inset-0 bg-black">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,rgba(0,0,0,0)_100%)]" />
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <ParticleField />
-      </Canvas>
-    </div>
+<div className="fixed inset-0 bg-[#0a0f1a]"> {/* Deep dark blue base */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,153,255,0.15)_0%,rgba(10,15,26,1)_100%)]" />
+  <Canvas camera={{ position: [0, 0, 1] }}>
+    <ParticleField />
+  </Canvas>
+</div>
   );
 }
 
