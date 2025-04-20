@@ -36,7 +36,7 @@ const socialLinks = [
 
 function Social() {
   return (
-    <section id="social" className="py-12 sm:py-20 bg-gradient-to-b from-[#112240] to-[#0A192F]">
+    <section id="social" className="py-12 sm:py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
