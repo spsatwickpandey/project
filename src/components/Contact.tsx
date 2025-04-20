@@ -40,7 +40,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-[#0A192F] to-[#112240]">
+    <section id="contact" className="py-20 ">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           {...motionProps}
