@@ -136,7 +136,7 @@ function Contact() {
 
             <motion.button
               type="submit"
-              className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl font-medium flex items-center justify-center group hover:shadow-lg hover:shadow-primary-500/25 transition-all disabled:opacity-50"
+              className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl font-medium flex items-center justify-center group hover:shadow-lg hover:bg-gradient-to-r from-primary via-purple-500 to-pink-500 transition-all disabled:opacity-50"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               disabled={status === 'sending'}
