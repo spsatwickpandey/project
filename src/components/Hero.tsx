@@ -86,7 +86,7 @@ function Hero() {
           <a
             href="/Satwick_Pandey_Resume.pdf"
             download
-            className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white w-full sm:w-auto justify-center hover:bg-primary-600 transition-colors"
+            className="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white w-full sm:w-auto justify-center hover:bg-gradient-to-r from-primary via-purple-500 to-pink-500 transition-colors"
           >
             <Download className="mr-3" size={20} />
             <span className="font-medium text-base sm:text-lg">Download Resume</span>
