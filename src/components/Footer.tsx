@@ -15,7 +15,7 @@ function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-blue-700 to-[#0A192F] text-gray-300 pt-20 pb-6">
+    <footer className="relative bg-gradient-to-b from-grey-800 to-[#0A192F] text-white pt-20 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
