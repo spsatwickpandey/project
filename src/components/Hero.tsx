@@ -50,7 +50,7 @@ function Hero() {
               Hello, I'm
             </span>
             {/* LCP Element - Simplified styling for faster initial render */}
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-poppins font-bold text-primary-400">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-poppins font-bold text-bg-gradient-to-r from-primary via-purple-500 to-pink-500">
               Satwick Pandey
             </h1>
             
