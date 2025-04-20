@@ -117,7 +117,7 @@ function Hero() {
             
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-xl">
               <img
-                src="/1710339211464.jpeg"
+                src="/1710339211464.webp"
                 alt="Satwick Pandey"
                 className="w-full h-full object-cover"
                 fetchPriority="high"
