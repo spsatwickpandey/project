@@ -50,7 +50,7 @@ function ResumeLayout() {
   };
 
   return (
-    <section id="resume" className="py-20 min-h-screen bg-gradient-to-b from-[#0A192F] to-[#112240]">
+    <section id="resume" className="py-20 min-h-screen ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           className="text-4xl font-poppins font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400"
